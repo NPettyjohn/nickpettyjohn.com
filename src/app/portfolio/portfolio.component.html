@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="shading_filter">
+
+<!-- <app-site-theme> -->
+  <app-language-bar></app-language-bar>
+  <app-navigation-bar></app-navigation-bar>
+
+
+<!-- <p>PORTFOLIO!!</p> -->
+  <div class="site_section">
+    <p *ngIf="language=='english'">This site:</p>
+    <p *ngIf="language=='espanol'">Este sitio:</p>
+    <a href="http://www.nickpettyjohn.com"><img src='../../assets/NickPettyjohn.com.png' class="nickpettyjohn_site_image" alt="image of Nick" ></a>
+
+    <p *ngIf="language=='english'">Technologies: Angular, Express, Node.js, MongoDB</p>
+    <p *ngIf="language=='espanol'">Technologias: Angular, Express, Node.js, MongoDB</p>
+  </div>
+
+  </div>
+</div>
+
+<!-- <app-navigation-bar></app-navigation-bar> -->

@@ -1,0 +1,56 @@
+h1{
+  margin-top: 0px;
+}
+p{
+  margin-top: 1%;
+  /* font-size: 1.1em; */
+}
+label{
+  display: inline-block;
+  /* margin-bottom: 1%; */
+  width: 30%;
+  /* text-align: center; */
+}
+form{
+  /* background-color: purple; */
+  background: rgba(10, 10, 10, .8);
+  margin-top: 5%;
+  height: 40%;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+.form_row{
+  height: 20%;
+  vertical-align: top;
+}
+.button_row{
+  /* height: 20%; */
+  /* vertical-align: bottom; */
+}
+#email_box{
+  height: 30%;
+  width: 50%;
+  font-size: 1.5vmin;
+  /* font-size: 20pt; */
+  /* vertical-align: top; */
+}
+#message_box{
+  height: 100%;
+  width: 50%;
+  font-size: 1.5vmin;
+  vertical-align: top;
+}
+#submit_button{
+  margin-top: 10px;
+  margin-right: 19.5%;
+  float: right;
+  /* text-align: right; */
+  border-radius: 3px;
+  /* border: 2px solid black; */
+  /* font-weight: bold; */
+  font-size: 2vmin;
+  width: 150px;
+  height: auto;
+  /* box-shadow: 2px 2px black; */
+}

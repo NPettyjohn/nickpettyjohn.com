@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <div class="shading_filter">
+
+<!-- <app-site-theme> -->
+  <app-language-bar></app-language-bar>
+  <app-navigation-bar></app-navigation-bar>
+
+
+<!-- <p>CONTACT ME!!</p> -->
+
+<form *ngIf="language=='english' && message_submitted==false" (submit)="addNewEmail(email)" class="contact_me_form" #message_form="ngForm" name="message_form" >
+
+  <div class="form_row">
+    <label for="email">Your email address:</label>
+    <input [(ngModel)]='email.sender' #sender="ngModel" type="text" name="email_sender" id='email_box' required placeholder='someone@example.com'>
+  </div>
+
+  <div class="form_row">
+    <label for="message">Your message for me:</label>
+    <textarea [(ngModel)]='email.message' #message="ngModel" type="text" name="email_message" id='message_box' required placeholder='Hey Nick!'></textarea>
+  </div>
+
+  <div class="button_row">
+    <input type="submit" name="submit" [disabled]="message_form.form.invalid" value="Send Message" id='submit_button'>
+  </div>
+
+  <div class="warning_area">
+    <p *ngIf="!sender.valid" class="warning">* Email address can't be blank.</p>
+    <p *ngIf="!message.valid" class="warning">* Message can't be blank.</p>
+  </div>
+</form>
+
+<form *ngIf="language=='espanol' && message_submitted==false" (submit)="addNewEmail(email)" class="contact_me_form" #message_form="ngForm" name="message_form" >
+
+  <div class="form_row">
+    <label for="email">Tú dirección de correo electrónico:</label>
+    <input [(ngModel)]='email.sender' #sender="ngModel" type="text" name="email_sender" id='email_box' required placeholder='alguien@ejemplo.com'>
+  </div>
+
+  <div class="form_row">
+    <label for="message">Tú mensaje:</label>
+    <textarea [(ngModel)]='email.message' #message="ngModel" type="text" name="email_message" id='message_box' required placeholder='¿Qué tal, Nick?'></textarea>
+  </div>
+
+  <div class="button_row">
+    <input type="submit" name="submit" [disabled]="message_form.form.invalid" value="Eviar Mensaje" id='submit_button'>
+  </div>
+
+  <div class="warning_area">
+    <p *ngIf="!sender.valid" class="warning">* La dirección de correo electrónico no puede estar vacía.</p>
+    <p *ngIf="!message.valid" class="warning">* El mensaje no puede estar vacía.</p>
+  </div>
+</form>
+
+
+<div>
+  <p *ngIf="language=='english' && message_submitted==true" class="thank_you">Thank you for your message!</p>
+  <p *ngIf="language=='espanol' && message_submitted==true" class="thank_you">¡Gracias por tu mensaje!</p>
+</div>
+
+
+  </div>
+</div>
+
+<!-- <app-navigation-bar></app-navigation-bar> -->
